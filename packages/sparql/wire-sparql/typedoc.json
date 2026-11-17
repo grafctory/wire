@@ -9,9 +9,6 @@
     },
     "@metreeca/trio": {
       "*": "https://metreeca.github.io/trio/"
-    },
-    "typescript": {
-      "Crypto.randomUUID": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID"
     }
   }
 }
