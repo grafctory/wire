@@ -1,6 +1,6 @@
 {
   "name": "@metreeca/wire-sparql",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "SPARQL 1.1 query language framework for @metreeca/wire storage connectors.",
   "keywords": [
     "typescript",
@@ -56,5 +56,6 @@
   "devDependencies": {
     "typescript": "^5.9.3",
     "vitest": "^4.0.13"
-  }
+  },
+  "peerDependencies": null
 }
