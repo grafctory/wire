@@ -42,6 +42,9 @@ jobs:
       - name: Test
         run: npm run check
 
+      - name: Check packages
+        run: npx ush qc
+
       - name: Publish
         run: |
           VERSION=$(node -p "require('./package.json').version")
