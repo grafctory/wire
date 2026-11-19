@@ -53,7 +53,7 @@
     "@metreeca/wire-sparql": "^0.13.0"
   },
   "devDependencies": {
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "vitest": "^4.0.13"
   },
   "peerDependencies": null
