@@ -19,7 +19,7 @@
  *
  * Backs the `index` module with the {@link SPARQLBoolean}, {@link SPARQLBindings}, and {@link SPARQLBinding}
  * wire-document types and the {@link decodeTuples} and {@link decodeTerm} decoders that translate SPARQL 1.1 Query
- * Results JSON into the {@link @metreeca/wire-sparql!index.Tuple | Tuple} and {@link @metreeca/trio!Term | Term}
+ * Results JSON into the {@link @grafctory/wire-sparql!index.Tuple | Tuple} and {@link @grafctory/trio!Term | Term}
  * model.
  *
  * @module
@@ -27,9 +27,9 @@
  * @see {@link https://www.w3.org/TR/sparql11-results-json/ SPARQL 1.1 Query Results JSON Format}
  */
 
-import { createScope, type Scope } from "@metreeca/core/scope";
-import { type Blank, blank, named, tagged, type Term, typed } from "@metreeca/trio";
-import { type Tuple, variable } from "@metreeca/wire-sparql";
+import { createScope, type Scope } from "@grafctory/core/scope";
+import { type Blank, blank, named, tagged, type Term, typed } from "@grafctory/trio";
+import { type Tuple, variable } from "@grafctory/wire-sparql";
 
 
 /**
@@ -90,7 +90,7 @@ export type SPARQLBinding = {
 /**
  * Decodes a {@link SPARQLBindings} value into the {@link Tuple} sequence produced for SPARQL `SELECT` results.
  *
- * Variable names are decoded from the wire string keys into {@link @metreeca/wire-sparql!index.Variable | Variable}
+ * Variable names are decoded from the wire string keys into {@link @grafctory/wire-sparql!index.Variable | Variable}
  * tokens via {@link variable}. A single blank-node {@link createScope | scope}, shared across all rows, correlates
  * `bnode` labels over the whole result set.
  *
@@ -114,7 +114,7 @@ export function decodeTuples(value: SPARQLBindings): readonly Tuple[] {
 /**
  * Decodes a {@link SPARQLBinding} into an RDF {@link Term}.
  *
- * Decodes a `bnode` binding to a scope-numbered {@link @metreeca/trio!Blank | Blank}, minting one node per distinct
+ * Decodes a `bnode` binding to a scope-numbered {@link @grafctory/trio!Blank | Blank}, minting one node per distinct
  * label from `blanks` so repeats of one label correlate to the same node. The `uri` value is validated through
  * {@link named}, and a literal's lexical form, language tag and `datatype` IRI through {@link tagged} and
  * {@link typed}, while an unrecognised `type` is rejected.

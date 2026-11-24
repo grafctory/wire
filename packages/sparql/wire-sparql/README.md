@@ -1,14 +1,14 @@
-# @metreeca/wire-sparql
+# @grafctory/wire-sparql
 
-[![npm](https://img.shields.io/npm/v/@metreeca/wire-sparql)](https://www.npmjs.com/package/@metreeca/wire-sparql)
+[![npm](https://img.shields.io/npm/v/@grafctory/wire-sparql)](https://www.npmjs.com/package/@grafctory/wire-sparql)
 
-SPARQL 1.1 query language framework for [@metreeca/wire](https://github.com/metreeca/wire) storage connectors.
+SPARQL 1.1 query language framework for [@grafctory/wire](https://github.com/grafctory/wire) storage connectors.
 
 Provides a uniform `Repository` interface for issuing SPARQL queries and updates and for writing RDF data into graphs
 against any backend (an embedded store, a remote endpoint, or a managed server), without binding application code to a
 specific store or client. It also bundles
 combinators for composing SPARQL queries and updates from typed fragments, and exchanges data as the RDF terms and
-statements of [@metreeca/trio](https://github.com/metreeca/trio), which it pulls in as a direct dependency.
+statements of [@grafctory/trio](https://github.com/grafctory/trio), which it pulls in as a direct dependency.
 
 # Installation
 
@@ -16,8 +16,8 @@ Install this framework together with a backend connector for your target engine,
 requires:
 
 ```shell
-npm install @metreeca/wire-sparql                # the SPARQL query API (this framework)
-npm install @metreeca/wire-sparql-<backend>      # backend connector from the table below
+npm install @grafctory/wire-sparql                # the SPARQL query API (this framework)
+npm install @grafctory/wire-sparql-<backend>      # backend connector from the table below
 npm install <peer-dependency>                    # connector's peer dependency, where required
 ```
 
@@ -28,19 +28,19 @@ npm install <peer-dependency>                    # connector's peer dependency, 
 
 | Connector Package                | Peer Dependency    | Engine                          |
 |----------------------------------|--------------------|---------------------------------|
-| [@metreeca/wire-sparql-http]     | -                  | [SPARQL 1.1 Protocol] endpoint  |
-| [@metreeca/wire-sparql-rdf4j]    | -                  | [RDF4J REST API] endpoint       |
-| [@metreeca/wire-sparql-oxigraph] | `oxigraph >=0.5.0` | [Oxigraph] in-memory WASM store |
+| [@grafctory/wire-sparql-http]     | -                  | [SPARQL 1.1 Protocol] endpoint  |
+| [@grafctory/wire-sparql-rdf4j]    | -                  | [RDF4J REST API] endpoint       |
+| [@grafctory/wire-sparql-oxigraph] | `oxigraph >=0.5.0` | [Oxigraph] in-memory WASM store |
 
-[@metreeca/wire-sparql-http]: https://metreeca.github.io/wire/modules/_metreeca_wire-sparql-http.html
+[@grafctory/wire-sparql-http]: https://grafctory.github.io/wire/modules/_grafctory_wire-sparql-http.html
 
 [SPARQL 1.1 Protocol]: https://www.w3.org/TR/sparql11-protocol/
 
-[@metreeca/wire-sparql-rdf4j]: https://metreeca.github.io/wire/modules/_metreeca_wire-sparql-rdf4j.html
+[@grafctory/wire-sparql-rdf4j]: https://grafctory.github.io/wire/modules/_grafctory_wire-sparql-rdf4j.html
 
 [RDF4J REST API]: https://rdf4j.org/documentation/reference/rest-api/
 
-[@metreeca/wire-sparql-oxigraph]: https://metreeca.github.io/wire/modules/_metreeca_wire-sparql-oxigraph.html
+[@grafctory/wire-sparql-oxigraph]: https://grafctory.github.io/wire/modules/_grafctory_wire-sparql-oxigraph.html
 
 [Oxigraph]: https://github.com/oxigraph/oxigraph
 
@@ -49,14 +49,14 @@ npm install <peer-dependency>                    # connector's peer dependency, 
 > [!NOTE]
 >
 > This section introduces essential concepts; for complete coverage, see the
-> [API reference](https://metreeca.github.io/wire/modules/_metreeca_wire-sparql.html).
+> [API reference](https://grafctory.github.io/wire/modules/_grafctory_wire-sparql.html).
 
 ## Querying a Backend
 
 Obtain a `Repository` from any backend connector, then run SPARQL queries and updates through its methods:
 
 ```typescript
-import { createHTTPRepository } from "@metreeca/wire-sparql-http";
+import { createHTTPRepository } from "@grafctory/wire-sparql-http";
 
 const repository = createHTTPRepository({
 	query: "https://example.org/sparql",
@@ -101,7 +101,7 @@ Write RDF triples into a graph with `merge`, which adds them to the graph conten
 Both take the triples as terms rather than as SPARQL text, so connectors can upload large data sets in bulk:
 
 ```typescript
-import { named, triple, typed } from "@metreeca/trio";
+import { named, triple, typed } from "@grafctory/trio";
 
 const widget = triple(
 	named("https://example.org/widget"),
@@ -135,15 +135,15 @@ await repository.execute(async tx => {
 
 A backend connector implements the `Repository` interface (`ask`, `select`, `construct`, `update`, `merge`, `store`,
 `execute`, and `close`), lifting native backend nodes into the shared term model with the `named`, `tagged`, and
-`typed` constructors of [@metreeca/trio](https://github.com/metreeca/trio), and parsing or serialising RDF payloads
-with its `@metreeca/trio/ntriples` codec, as the bundled HTTP connectors do for query results and graph uploads.
+`typed` constructors of [@grafctory/trio](https://github.com/grafctory/trio), and parsing or serialising RDF payloads
+with its `@grafctory/trio/ntriples` codec, as the bundled HTTP connectors do for query results and graph uploads.
 
 A minimal connector has the shape:
 
 ```typescript
-import type { IRI } from "@metreeca/core/resource";
-import type { Triple } from "@metreeca/trio";
-import type { Dataset, Repository, SPARQL } from "@metreeca/wire-sparql";
+import type { IRI } from "@grafctory/core/resource";
+import type { Triple } from "@grafctory/trio";
+import type { Dataset, Repository, SPARQL } from "@grafctory/wire-sparql";
 
 function createMyRepository(/* endpoint, client, … */): Repository {
 
@@ -173,15 +173,15 @@ function createMyRepository(/* endpoint, client, … */): Repository {
 
 > [!TIP]
 >
-> Each SPARQL connector in the [@metreeca/wire](https://github.com/metreeca/wire) monorepo is a complete, working
+> Each SPARQL connector in the [@grafctory/wire](https://github.com/grafctory/wire) monorepo is a complete, working
 > implementation that you can read to learn the approach or adapt for a new engine.
 
 # Support
 
-- open an [issue](https://github.com/metreeca/wire/issues) to report a problem or to suggest a new feature
-- start a [discussion](https://github.com/metreeca/wire/discussions) to ask a how-to question or to share an idea
+- open an [issue](https://github.com/grafctory/wire/issues) to report a problem or to suggest a new feature
+- start a [discussion](https://github.com/grafctory/wire/discussions) to ask a how-to question or to share an idea
 
 # License
 
 This project is licensed under the Apache 2.0 License –
-see [LICENSE](https://github.com/metreeca/wire?tab=Apache-2.0-1-ov-file) file for details.
+see [LICENSE](https://github.com/grafctory/wire?tab=Apache-2.0-1-ov-file) file for details.

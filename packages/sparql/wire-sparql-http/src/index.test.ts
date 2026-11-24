@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import { blank, named, tagged, triple, typed } from "@metreeca/trio";
-import { NTriples } from "@metreeca/trio/ntriples";
-import { SPARQLResults, SPARQLUpdate } from "@metreeca/wire-sparql";
+import { blank, named, tagged, triple, typed } from "@grafctory/trio";
+import { NTriples } from "@grafctory/trio/ntriples";
+import { SPARQLResults, SPARQLUpdate } from "@grafctory/wire-sparql";
 import { describe, expect, test, vi } from "vitest";
 import { decodeTerm, decodeTuples } from "./index.core.js";
 import { createHTTPRepository } from "./index.js";

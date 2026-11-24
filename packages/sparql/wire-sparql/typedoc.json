@@ -4,11 +4,11 @@
     "src/builder.ts"
   ],
   "externalSymbolLinkMappings": {
-    "@metreeca/core": {
-      "*": "https://metreeca.github.io/core/"
+    "@grafctory/core": {
+      "*": "https://grafctory.github.io/core/"
     },
-    "@metreeca/trio": {
-      "*": "https://metreeca.github.io/trio/"
+    "@grafctory/trio": {
+      "*": "https://grafctory.github.io/trio/"
     }
   }
 }

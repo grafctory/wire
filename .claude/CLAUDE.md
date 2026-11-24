@@ -11,7 +11,7 @@
 
 # Overview
 
-`@metreeca/wire` is a standalone, general-purpose monorepo collecting database storage connectors as leaf packages
+`@grafctory/wire` is a standalone, general-purpose monorepo collecting database storage connectors as leaf packages
 grouped by query-language family under `packages/<group>/` (for example `packages/sparql/`), spanning the SPARQL 1.1,
 SQL:2011, and GQL:2024 / openCypher query-language families.
 
@@ -20,19 +20,19 @@ there is no intermediate core package. The connectors are self-contained and con
 
 # References
 
-- [@metreeca/core](https://github.com/metreeca/core) - Core utilities and shared types
+- [@grafctory/core](https://github.com/grafctory/core) - Core utilities and shared types
 
 # NPM Scripts
 
 - **`npm run clean`** - Remove dependencies and build artefacts
 - **`npm run prime`** - Install dependencies from the lockfile
-- **`npm run setup`** - Install dependencies and link sibling `@metreeca/*` repositories
+- **`npm run setup`** - Install dependencies and link sibling `@grafctory/*` repositories
 - **`npm run build`** - Compile sources and generate docs
 - **`npm run check`** - Run the test suite
 - **`npm run proof`** - Build and serve docs
 
 > [!CAUTION]
-> **`prime` and `setup` are not interchangeable.** Run `prime` when finalising a public release: `@metreeca/*` imports
+> **`prime` and `setup` are not interchangeable.** Run `prime` when finalising a public release: `@grafctory/*` imports
 > resolve to the published releases recorded in the lockfile. Run `setup` for local development against unpublished
 > sibling branches: imports resolve to the working copies in the neighbouring repositories.
 
@@ -51,13 +51,13 @@ instead, and never explain self-evident naming choices such as respellings of re
 
 # Testing
 
-The root `vitest.config.ts` resolves imports of symlinked `@metreeca/*` packages, both workspace packages and siblings
-linked by `npm run setup`, to the TypeScript source their `@metreeca/source` export entries declare, so tests run
+The root `vitest.config.ts` resolves imports of symlinked `@grafctory/*` packages, both workspace packages and siblings
+linked by `npm run setup`, to the TypeScript source their `@grafctory/source` export entries declare, so tests run
 against `src/` without a prior build. Packages installed from the registry keep resolving to their published `dist`.
 An export entry lacking the condition falls back to `dist` as well, and tests then see that package as last built.
 
 > [!CAUTION]
-> **NEVER** enable `@metreeca/source` through vitest `resolve.conditions`. Published manifests carry the condition
+> **NEVER** enable `@grafctory/source` through vitest `resolve.conditions`. Published manifests carry the condition
 > while their packages ship no `src/`, and Vite does not fall back to `default` on a missing target, so a global
 > condition breaks every package installed from the registry that declares it, as happens under `npm ci` in CI.
 
@@ -73,7 +73,7 @@ files by name) still hold.
 
 All workspace packages share the same version, defined in the root `package.json` `version` field. When bumping the
 version, cascade the change to all `packages/**/package.json` — both the package `version` field and any internal
-`@metreeca/wire*` dependency ranges.
+`@grafctory/wire*` dependency ranges.
 
 When adding, removing, or renaming packages, update the package table in the root `README.md` Usage section to match.
 

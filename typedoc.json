@@ -3,21 +3,21 @@
     "packages/*/*"
   ],
   "entryPointStrategy": "packages",
-  "name": "@metreeca/wire",
+  "name": "@grafctory/wire",
   "out": "docs",
   "readme": "README.md",
-  "hostedBaseUrl": "https://metreeca.github.io/wire/",
+  "hostedBaseUrl": "https://grafctory.github.io/wire/",
   "useFirstParagraphOfCommentAsSummary": true,
   "favicon": "https://metreeca.com/assets/icon.ico",
   "sourceLinkExternal": true,
   "markdownLinkExternal": true,
   "navigationLinks": {
-    "GitHub": "https://github.com/metreeca/wire"
+    "GitHub": "https://github.com/grafctory/wire"
   },
   "externalSymbolLinkMappings": {
-    "@metreeca/http": {
-      "createFetch": "https://metreeca.github.io/http/functions/index.createFetch.html",
-      "Problem": "https://metreeca.github.io/http/types/success.Problem.html"
+    "@grafctory/http": {
+      "createFetch": "https://grafctory.github.io/http/functions/index.createFetch.html",
+      "Problem": "https://grafctory.github.io/http/types/success.Problem.html"
     }
   },
   "githubPages": false,

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-import { symlinks } from "@metreeca/rack/vite";
+import { symlinks } from "@grafctory/rack/vite";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
 
 	plugins: [
-		symlinks({ conditions: "@metreeca/source" })
+		symlinks({ conditions: "@grafctory/source" })
 	],
 
 	test: {

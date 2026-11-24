@@ -16,7 +16,7 @@
 
 /**
  * {@link https://rdf4j.org/documentation/reference/rest-api/ RDF4J REST API} endpoint connector for the
- * {@link https://github.com/metreeca/wire @metreeca/wire} storage connector collection.
+ * {@link https://github.com/grafctory/wire @grafctory/wire} storage connector collection.
  *
  * Exposes any {@link https://rdf4j.org/ RDF4J Server} repository through the common {@link Repository} API,
  * bracketing each task in a server-managed transaction and applying optional inference and timeout settings.
@@ -29,23 +29,23 @@
  * @see {@link https://rdf4j.org/documentation/reference/rest-api/#transactions RDF4J REST API — Transactions}
  */
 
-import { assert } from "@metreeca/core";
-import { immutable } from "@metreeca/core/values";
-import { type IRI, resolve } from "@metreeca/core/resource";
-import { createFetch } from "@metreeca/http";
-import { type Problem, success } from "@metreeca/http/success";
-import { transport } from "@metreeca/http/transport";
-import { type Triple } from "@metreeca/trio";
-import { encodeNTriples, NTriples } from "@metreeca/trio/ntriples";
+import { assert } from "@grafctory/core";
+import { immutable } from "@grafctory/core/values";
+import { type IRI, resolve } from "@grafctory/core/resource";
+import { createFetch } from "@grafctory/http";
+import { type Problem, success } from "@grafctory/http/success";
+import { transport } from "@grafctory/http/transport";
+import { type Triple } from "@grafctory/trio";
+import { encodeNTriples, NTriples } from "@grafctory/trio/ntriples";
 import {
 	type Dataset,
 	type Repository,
 	type RepositoryClient,
 	SPARQLQuery,
 	SPARQLUpdate
-} from "@metreeca/wire-sparql";
-import { drop, silent } from "@metreeca/wire-sparql/builder";
-import { createHTTPRepository } from "@metreeca/wire-sparql-http";
+} from "@grafctory/wire-sparql";
+import { drop, silent } from "@grafctory/wire-sparql/builder";
+import { createHTTPRepository } from "@grafctory/wire-sparql-http";
 
 
 /**

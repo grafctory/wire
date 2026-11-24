@@ -16,7 +16,7 @@
 
 /**
  * {@link https://oxigraph.org/ Oxigraph} in-memory WASM store connector for the
- * {@link https://github.com/metreeca/wire @metreeca/wire} storage connector collection.
+ * {@link https://github.com/grafctory/wire @grafctory/wire} storage connector collection.
  *
  * Exposes an Oxigraph WASM store, running entirely in-process with no external server required, through the common
  * {@link Repository} API.
@@ -29,10 +29,10 @@
  * @see {@link https://github.com/oxigraph/oxigraph/blob/main/js/README.md Oxigraph JavaScript/WASM API}
  */
 
-import { error } from "@metreeca/core";
-import { immutable } from "@metreeca/core/values";
-import { type IRI } from "@metreeca/core/resource";
-import { createScope, type Scope } from "@metreeca/core/scope";
+import { error } from "@grafctory/core";
+import { immutable } from "@grafctory/core/values";
+import { type IRI } from "@grafctory/core/resource";
+import { createScope, type Scope } from "@grafctory/core/scope";
 import {
 	type Blank,
 	blank,
@@ -43,11 +43,11 @@ import {
 	type Term,
 	type Triple,
 	typed
-} from "@metreeca/trio";
-import { encodeNTriples, NTriples } from "@metreeca/trio/ntriples";
-import type { Dataset, Repository } from "@metreeca/wire-sparql";
-import { variable } from "@metreeca/wire-sparql";
-import { drop, silent } from "@metreeca/wire-sparql/builder";
+} from "@grafctory/trio";
+import { encodeNTriples, NTriples } from "@grafctory/trio/ntriples";
+import type { Dataset, Repository } from "@grafctory/wire-sparql";
+import { variable } from "@grafctory/wire-sparql";
+import { drop, silent } from "@grafctory/wire-sparql/builder";
 import {
 	defaultGraph,
 	type NamedNode as OxyNamedNode,

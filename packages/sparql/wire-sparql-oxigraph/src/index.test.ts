@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import { xsd } from "@metreeca/core/datatype";
-import { blank, named, triple, typed } from "@metreeca/trio";
-import type { Repository } from "@metreeca/wire-sparql";
+import { xsd } from "@grafctory/core/datatype";
+import { blank, named, triple, typed } from "@grafctory/trio";
+import type { Repository } from "@grafctory/wire-sparql";
 import { describe, expect, it } from "vitest";
 import { createOxiRepository } from "./index.js";
 

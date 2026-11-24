@@ -1,16 +1,16 @@
 {
-  "name": "@metreeca/wire-sparql",
+  "name": "@grafctory/wire-sparql",
   "version": "0.13.1",
-  "description": "SPARQL 1.1 query language framework for @metreeca/wire storage connectors.",
+  "description": "SPARQL 1.1 query language framework for @grafctory/wire storage connectors.",
   "keywords": [
     "typescript",
     "rdf",
     "iri",
     "sparql"
   ],
-  "homepage": "https://metreeca.github.io/wire/",
+  "homepage": "https://grafctory.github.io/wire/",
   "bugs": {
-    "url": "https://github.com/metreeca/wire/issues",
+    "url": "https://github.com/grafctory/wire/issues",
     "email": "info@metreeca.com"
   },
   "license": "Apache-2.0",
@@ -21,18 +21,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/metreeca/wire.git",
+    "url": "git+https://github.com/grafctory/wire.git",
     "directory": "packages/wire-sparql"
   },
   "type": "module",
   "sideEffects": false,
   "exports": {
     ".": {
-      "@metreeca/source": "./src/index.ts",
+      "@grafctory/source": "./src/index.ts",
       "default": "./dist/index.js"
     },
     "./builder": {
-      "@metreeca/source": "./src/builder.ts",
+      "@grafctory/source": "./src/builder.ts",
       "default": "./dist/builder.js"
     }
   },
@@ -50,8 +50,8 @@
     "check": "npx vitest --typecheck run"
   },
   "dependencies": {
-    "@metreeca/core": "^0.14.0",
-    "@metreeca/trio": "^0.3.0"
+    "@grafctory/core": "^0.14.0",
+    "@grafctory/trio": "^0.3.0"
   },
   "devDependencies": {
     "typescript": "^6.0.3",

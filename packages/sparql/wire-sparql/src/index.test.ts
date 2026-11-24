@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { named, rdf, type Triple, triple, typed } from "@metreeca/trio";
+import { named, rdf, type Triple, triple, typed } from "@grafctory/trio";
 import { describe, expect, test, vi } from "vitest";
 import type { Dataset, Repository, RepositoryClient, Tuple } from "./index.js";
 import {

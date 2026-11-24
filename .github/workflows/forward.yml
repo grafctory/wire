@@ -10,7 +10,7 @@ jobs:
 
   forward:
 
-    uses: metreeca/.github/.github/workflows/forward.yml@main
+    uses: grafctory/.github/.github/workflows/forward.yml@main
     with:
-      project-url: https://github.com/orgs/metreeca/projects/3
+      project-url: https://github.com/orgs/grafctory/projects/1
     secrets: inherit

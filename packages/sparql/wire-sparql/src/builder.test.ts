@@ -20,7 +20,7 @@ import {
 	rdf,
 	tagged as taggedTerm,
 	typed as typedTerm
-} from "@metreeca/trio";
+} from "@grafctory/trio";
 import { describe, expect, it } from "vitest";
 import {
 	aad,

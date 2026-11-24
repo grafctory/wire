@@ -19,7 +19,7 @@
  *
  * Provides a single, backend-independent API for working with SPARQL stores. Consumers query and write them through
  * the {@link Repository} interface and exchange data as the SPARQL types defined here, layered on the RDF terms and
- * statements of {@link https://metreeca.github.io/trio/ @metreeca/trio}, regardless of which connector backs the store.
+ * statements of {@link https://grafctory.github.io/trio/ @grafctory/trio}, regardless of which connector backs the store.
  *
  * **Media types**
  *
@@ -59,11 +59,11 @@
  * @see {@link https://www.w3.org/TR/rdf11-concepts/ RDF 1.1 Concepts and Abstract Syntax}
  */
 
-import { error, isNumber, isString } from "@metreeca/core";
-import { type IRI } from "@metreeca/core/resource";
-import { dedent } from "@metreeca/core/strings";
-import { equals, immutable } from "@metreeca/core/values";
-import { type Predicate, type Subject, type Term, type Triple } from "@metreeca/trio";
+import { error, isNumber, isString } from "@grafctory/core";
+import { type IRI } from "@grafctory/core/resource";
+import { dedent } from "@grafctory/core/strings";
+import { equals, immutable } from "@grafctory/core/values";
+import { type Predicate, type Subject, type Term, type Triple } from "@grafctory/trio";
 import { update } from "./builder.js";
 
 
@@ -196,7 +196,7 @@ export interface Repository extends RepositoryClient {
 	 * @param task - Async or sync function performing SPARQL operations on the per-call {@link RepositoryClient}
 	 *
 	 * @returns A promise resolving to the value returned by `task`; rejects with a
-	 * {@link @metreeca/core!Problem | Problem} if a transaction, network, storage, or other processing error occurs
+	 * {@link @grafctory/core!Problem | Problem} if a transaction, network, storage, or other processing error occurs
 	 */
 	execute<V>(task: (repository: RepositoryClient) => V | Promise<V>): Promise<V>;
 
@@ -215,7 +215,7 @@ export interface Repository extends RepositoryClient {
 	 * > `store` and `execute` all have undefined behaviour once the underlying resources are released.
 	 *
 	 * @returns A promise resolving when all resources have been released; rejects with a
-	 * {@link @metreeca/core!Problem | Problem} if a clean-up error occurs
+	 * {@link @grafctory/core!Problem | Problem} if a clean-up error occurs
 	 */
 	close(): Promise<void>;
 

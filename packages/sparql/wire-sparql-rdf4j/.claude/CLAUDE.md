@@ -6,7 +6,7 @@
 - [SPARQL 1.1 Protocol](https://www.w3.org/TR/sparql11-protocol/) - W3C HTTP protocol for SPARQL query and update
 
 > [!NOTE]
-> This connector delegates all non-transactional SPARQL exchanges to `@metreeca/wire-sparql-http`
+> This connector delegates all non-transactional SPARQL exchanges to `@grafctory/wire-sparql-http`
 > (`createHTTPRepository`) and layers RDF4J server-managed transactions and operation settings on top. Its tests
 > (`src/index.test.ts`) run against a stub `fetch` and cover only what the connector adds to the HTTP connector: the
 > forwarding of the `infer` and `timeout` settings and of dataset parameters to every endpoint, transactional ones

@@ -126,12 +126,12 @@
  * @see {@link https://www.w3.org/TR/rdf11-concepts/ RDF 1.1 Concepts}
  */
 
-import { error, type Identifier, isString, map } from "@metreeca/core";
-import { xsd } from "@metreeca/core/datatype";
-import { isTag, type Tag, type TagRange } from "@metreeca/core/language";
-import { type IRI, isIRI as isReference } from "@metreeca/core/resource";
-import { escape, isWellFormed } from "@metreeca/core/strings";
-import { rdf, type Term, type Triple } from "@metreeca/trio";
+import { error, type Identifier, isString, map } from "@grafctory/core";
+import { xsd } from "@grafctory/core/datatype";
+import { isTag, type Tag, type TagRange } from "@grafctory/core/language";
+import { type IRI, isIRI as isReference } from "@grafctory/core/resource";
+import { escape, isWellFormed } from "@grafctory/core/strings";
+import { rdf, type Term, type Triple } from "@grafctory/trio";
 import { type Pattern, type SPARQL, type Variable } from "./index.js";
 
 
@@ -2510,7 +2510,7 @@ export function variable(variable: Variable): SPARQL {
  * @remarks
  *
  * Renders SPARQL query text and is distinct from the same-named `term` encoder of
- * {@link https://metreeca.github.io/trio/ @metreeca/trio}, which mints RDF {@link Term} values. The companion
+ * {@link https://grafctory.github.io/trio/ @grafctory/trio}, which mints RDF {@link Term} values. The companion
  * serialisers {@link blank}, {@link tagged} and {@link typed} shadow that package's same-named value constructors the
  * same way, as does {@link reference} for its `named` one.
  */
@@ -2556,7 +2556,7 @@ export function blank(label?: number | string): SPARQL {
  *
  * The IRI is validated as an RFC 3987 reference, absolute or relative, and never resolved: a relative IRI is accepted
  * and rendered as supplied, unlike the `named` term constructor of
- * {@link https://metreeca.github.io/trio/ @metreeca/trio}, which admits only absolute ones.
+ * {@link https://grafctory.github.io/trio/ @grafctory/trio}, which admits only absolute ones.
  *
  * @param iri - The IRI to render, or omitted to mint a fresh `urn:uuid:` IRI
  *

@@ -16,7 +16,7 @@
 
 /**
  * {@link https://www.w3.org/TR/sparql11-protocol/ SPARQL 1.1 Protocol} endpoint connector for the
- * {@link https://github.com/metreeca/wire @metreeca/wire} storage connector collection.
+ * {@link https://github.com/grafctory/wire @grafctory/wire} storage connector collection.
  *
  * Exposes any SPARQL 1.1 Protocol compliant endpoint through the common {@link Repository} API.
  *
@@ -28,14 +28,14 @@
  * @see {@link https://www.w3.org/TR/sparql11-protocol/ SPARQL 1.1 Protocol}
  */
 
-import { isError } from "@metreeca/core";
-import { type IRI } from "@metreeca/core/resource";
-import { immutable } from "@metreeca/core/values";
-import { createFetch } from "@metreeca/http";
-import { type Problem, success } from "@metreeca/http/success";
-import { transport } from "@metreeca/http/transport";
-import { type Triple } from "@metreeca/trio";
-import { decodeNTriples, encodeNTriples, NTriples } from "@metreeca/trio/ntriples";
+import { isError } from "@grafctory/core";
+import { type IRI } from "@grafctory/core/resource";
+import { immutable } from "@grafctory/core/values";
+import { createFetch } from "@grafctory/http";
+import { type Problem, success } from "@grafctory/http/success";
+import { transport } from "@grafctory/http/transport";
+import { type Triple } from "@grafctory/trio";
+import { decodeNTriples, encodeNTriples, NTriples } from "@grafctory/trio/ntriples";
 import {
 	type Dataset,
 	type Repository,
@@ -43,8 +43,8 @@ import {
 	SPARQLQuery,
 	SPARQLResults,
 	SPARQLUpdate
-} from "@metreeca/wire-sparql";
-import { data, drop, graph, insert, reference, silent, triples, update } from "@metreeca/wire-sparql/builder";
+} from "@grafctory/wire-sparql";
+import { data, drop, graph, insert, reference, silent, triples, update } from "@grafctory/wire-sparql/builder";
 import { decodeTuples, type SPARQLBindings, type SPARQLBoolean } from "./index.core.js";
 
 

@@ -1,19 +1,19 @@
-# @metreeca/wire-sparql-rdf4j
+# @grafctory/wire-sparql-rdf4j
 
-[![npm](https://img.shields.io/npm/v/@metreeca/wire-sparql-rdf4j)](https://www.npmjs.com/package/@metreeca/wire-sparql-rdf4j)
+[![npm](https://img.shields.io/npm/v/@grafctory/wire-sparql-rdf4j)](https://www.npmjs.com/package/@grafctory/wire-sparql-rdf4j)
 
-SPARQL connector for [@metreeca/wire](https://github.com/metreeca/wire) backed by an RDF4J Server repository.
+SPARQL connector for [@grafctory/wire](https://github.com/grafctory/wire) backed by an RDF4J Server repository.
 
-Exposes any [RDF4J Server](https://rdf4j.org/) repository through the common [@metreeca/wire-sparql] `Repository`
+Exposes any [RDF4J Server](https://rdf4j.org/) repository through the common [@grafctory/wire-sparql] `Repository`
 interface, bracketing each task in a server-managed transaction. One-off operations outside a transaction are delegated
 to the [SPARQL 1.1 Protocol](https://www.w3.org/TR/sparql11-protocol/) through the companion
-[@metreeca/wire-sparql-http] connector.
+[@grafctory/wire-sparql-http] connector.
 
 # Installation
 
 ```shell
-npm install @metreeca/wire-sparql         # the SPARQL query API
-npm install @metreeca/wire-sparql-rdf4j   # this connector
+npm install @grafctory/wire-sparql         # the SPARQL query API
+npm install @grafctory/wire-sparql-rdf4j   # this connector
 ```
 
 > [!WARNING]
@@ -24,10 +24,10 @@ npm install @metreeca/wire-sparql-rdf4j   # this connector
 # Usage
 
 Connect to an RDF4J Server repository with `createRDF4JRepository`, then issue queries and updates through the
-[@metreeca/wire-sparql] `Repository` API:
+[@grafctory/wire-sparql] `Repository` API:
 
 ```typescript
-import { createRDF4JRepository } from "@metreeca/wire-sparql-rdf4j";
+import { createRDF4JRepository } from "@grafctory/wire-sparql-rdf4j";
 
 const repository = createRDF4JRepository({
 	server: "https://example.org/rdf4j-server",
@@ -39,7 +39,7 @@ The optional `infer` and `timeout` settings apply to every operation: `infer: fa
 statements, and `timeout` bounds the execution time of each operation, in seconds. RDF4J Server ignores `timeout` on
 updates issued within an `execute` task, so an update that needs a time bound has to run outside a transaction.
 
-See [@metreeca/wire-sparql] for the `Repository` API: `ask`, `select` and `construct` query the store, `update`,
+See [@grafctory/wire-sparql] for the `Repository` API: `ask`, `select` and `construct` query the store, `update`,
 `merge` and `store` write to it, and `execute` and `close` manage transactions and resources.
 
 > [!IMPORTANT]
@@ -49,16 +49,16 @@ See [@metreeca/wire-sparql] for the `Repository` API: `ask`, `select` and `const
 > NativeStore both default to `SNAPSHOT_READ`). The REST API exposes no isolation-level parameter on the
 > start-transaction call.
 
-[@metreeca/wire-sparql]: https://metreeca.github.io/wire/modules/_metreeca_wire-sparql.html
+[@grafctory/wire-sparql]: https://grafctory.github.io/wire/modules/_grafctory_wire-sparql.html
 
-[@metreeca/wire-sparql-http]: https://metreeca.github.io/wire/modules/_metreeca_wire-sparql-http.html
+[@grafctory/wire-sparql-http]: https://grafctory.github.io/wire/modules/_grafctory_wire-sparql-http.html
 
 # Support
 
-- open an [issue](https://github.com/metreeca/wire/issues) to report a problem or to suggest a new feature
-- start a [discussion](https://github.com/metreeca/wire/discussions) to ask a how-to question or to share an idea
+- open an [issue](https://github.com/grafctory/wire/issues) to report a problem or to suggest a new feature
+- start a [discussion](https://github.com/grafctory/wire/discussions) to ask a how-to question or to share an idea
 
 # License
 
 This project is licensed under the Apache 2.0 License –
-see [LICENSE](https://github.com/metreeca/wire?tab=Apache-2.0-1-ov-file) file for details.
+see [LICENSE](https://github.com/grafctory/wire?tab=Apache-2.0-1-ov-file) file for details.

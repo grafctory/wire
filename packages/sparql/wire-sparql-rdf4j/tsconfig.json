@@ -12,7 +12,7 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "customConditions": [
-      "@metreeca/source"
+      "@grafctory/source"
     ]
   },
   "include": [

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import { named, triple, typed } from "@metreeca/trio";
-import { NTriples } from "@metreeca/trio/ntriples";
-import { SPARQLResults, SPARQLUpdate } from "@metreeca/wire-sparql";
+import { named, triple, typed } from "@grafctory/trio";
+import { NTriples } from "@grafctory/trio/ntriples";
+import { SPARQLResults, SPARQLUpdate } from "@grafctory/wire-sparql";
 import { describe, expect, it, vi } from "vitest";
 import { createRDF4JRepository } from "./index.js";
 

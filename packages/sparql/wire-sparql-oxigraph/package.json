@@ -1,7 +1,7 @@
 {
-  "name": "@metreeca/wire-sparql-oxigraph",
+  "name": "@grafctory/wire-sparql-oxigraph",
   "version": "0.13.1",
-  "description": "SPARQL connector for @metreeca/wire backed by an Oxigraph in-memory WASM store.",
+  "description": "SPARQL connector for @grafctory/wire backed by an Oxigraph in-memory WASM store.",
   "keywords": [
     "typescript",
     "json-ld",
@@ -9,9 +9,9 @@
     "sparql",
     "oxigraph"
   ],
-  "homepage": "https://metreeca.github.io/wire/",
+  "homepage": "https://grafctory.github.io/wire/",
   "bugs": {
-    "url": "https://github.com/metreeca/wire/issues",
+    "url": "https://github.com/grafctory/wire/issues",
     "email": "info@metreeca.com"
   },
   "license": "Apache-2.0",
@@ -22,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/metreeca/wire.git",
+    "url": "git+https://github.com/grafctory/wire.git",
     "directory": "packages/wire-sparql-oxigraph"
   },
   "type": "module",
   "sideEffects": false,
   "exports": {
     ".": {
-      "@metreeca/source": "./src/index.ts",
+      "@grafctory/source": "./src/index.ts",
       "default": "./dist/index.js"
     }
   },
@@ -47,9 +47,9 @@
     "check": "npx vitest --typecheck run"
   },
   "dependencies": {
-    "@metreeca/core": "^0.14.0",
-    "@metreeca/trio": "^0.3.0",
-    "@metreeca/wire-sparql": "^0.13.1"
+    "@grafctory/core": "^0.14.0",
+    "@grafctory/trio": "^0.3.0",
+    "@grafctory/wire-sparql": "^0.13.1"
   },
   "peerDependencies": {
     "oxigraph": ">=0.5.0"

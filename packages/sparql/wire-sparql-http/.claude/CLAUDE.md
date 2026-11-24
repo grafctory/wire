@@ -11,6 +11,6 @@ description: Development guidelines for the SPARQL 1.1 Protocol HTTP connector.
   management protocol for atomic multi-statement updates
 
 > [!NOTE]
-> This connector is a pure `@metreeca/wire-sparql` implementation. Its tests (`src/index.test.ts`) run against a stub
+> This connector is a pure `@grafctory/wire-sparql` implementation. Its tests (`src/index.test.ts`) run against a stub
 > `fetch` and cover the result decoders, the dataset parameters and the graph store exchanges, through both the Graph
 > Store Protocol endpoint and the SPARQL update fallback used when no such endpoint is configured.
