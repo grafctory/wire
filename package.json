@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "Pluggable storage connectors for relational and graph databases.",
   "keywords": [
     "typescript",
