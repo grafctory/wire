@@ -10,20 +10,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased](https://github.com/grafctory/wire/compare/v0.13.1...HEAD)
 
-## [0.13.1](https://github.com/metreeca/wire/compare/v0.13.0...v0.13.1) - 2026-11-24
+## [0.13.1](https://github.com/grafctory/wire/compare/v0.13.0...v0.13.1) - 2026-11-24
 
 ### Changed
 
 - Maintenance release with no change to the published API or behaviour
 
-## [0.13.0](https://github.com/metreeca/wire/compare/v0.12.0...v0.13.0) - 2026-11-17
+## [0.13.0](https://github.com/grafctory/wire/compare/v0.12.0...v0.13.0) - 2026-11-17
 
 ### Changed
 
 - **Breaking**: Upgrade `@metreeca/core` to `^0.14.0`, `@metreeca/http` to `^0.6.0` and `@metreeca/trio` to `^0.3.0`;
   projects using them alongside these connectors raise their own ranges as well, so that each is shared as a single copy
 
-## [0.12.0](https://github.com/metreeca/wire/compare/v0.11.2...v0.12.0) - 2026-10-19
+## [0.12.0](https://github.com/grafctory/wire/compare/v0.11.2...v0.12.0) - 2026-10-19
 
 ### Added
 
@@ -55,7 +55,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `@metreeca/wire-sparql` — `./builder` `and`, `or`, `seq` and `alt` bracket the result when several operands
   survive, so they nest inside any enclosing expression or property path whatever its operator precedence
 
-## [0.11.2](https://github.com/metreeca/wire/compare/v0.11.1...v0.11.2) - 2026-10-14
+## [0.11.2](https://github.com/grafctory/wire/compare/v0.11.1...v0.11.2) - 2026-10-14
 
 ### Changed
 
@@ -66,14 +66,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   no sources for: consumers resolving it must restrict it to symlinked checkouts, as the `symlinks()` plugin from
   `@metreeca/rack/vite` does, rather than enable it globally, which fails on every package installed from the registry
 
-## [0.11.1](https://github.com/metreeca/wire/compare/v0.11.0...v0.11.1) - 2026-10-01
+## [0.11.1](https://github.com/grafctory/wire/compare/v0.11.0...v0.11.1) - 2026-10-01
 
 ### Fixed
 
 - Published package exports resolve to the compiled `dist` modules only, so consumers resolving the `@metreeca/source`
   export condition no longer fail on TypeScript sources missing from the published packages
 
-## [0.11.0](https://github.com/metreeca/wire/compare/v0.10.0...v0.11.0) - 2026-10-01
+## [0.11.0](https://github.com/grafctory/wire/compare/v0.10.0...v0.11.0) - 2026-10-01
 
 ### Changed
 
@@ -82,7 +82,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   releases, so consumers upgrade them alongside
 - Raise the minimum supported Node.js version from `22.0.0` to `22.22.0`
 
-## [0.10.0](https://github.com/metreeca/wire/compare/v0.9.0...v0.10.0) - 2026-09-09
+## [0.10.0](https://github.com/grafctory/wire/compare/v0.9.0...v0.10.0) - 2026-09-09
 
 ### Added
 
@@ -150,7 +150,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `@metreeca/wire-sparql` — `rdf` and `xsd` namespace exports; the `xsd` datatype namespace is now sourced from
   `@metreeca/core` and the `rdf` vocabulary namespace from `@metreeca/trio`
 
-## [0.9.0](https://github.com/metreeca/wire/releases/tag/v0.9.0)
+## [0.9.0](https://github.com/grafctory/wire/releases/tag/v0.9.0)
 
 ### Added
 

@@ -1,7 +1,7 @@
 # Getting Involved
 
 Code patches are not the only way to get involved: you can help the project by reporting bugs, improving docs, helping
-others on [GitHub Issues](https://github.com/grafctory/wire/issues), telling the world about Metreeca… ;-)
+others on [GitHub Issues](https://github.com/grafctory/wire/issues), telling the world about Grafctory… ;-)
 
 # Reporting Bugs
 
