@@ -2,8 +2,9 @@
 
 Pluggable storage connectors for relational and graph databases.
 
-**@grafctory/wire** wires concrete database backends behind a common query interface per query-language family, so
-application code targets a query language rather than a product-specific driver or dialect:
+**@grafctory/wire** is the database connector module of the [Grafctory][grafctory] model-driven knowledge graph
+framework. It wires concrete database backends behind a common query interface per query-language family, so application
+code targets a query language rather than a product-specific driver or dialect:
 
 - **One API per Family**: a single query interface serves every backend in a query-language family
 - **Pluggable Backends**: switch database products without rewriting query code
@@ -13,6 +14,8 @@ Connectors are self-contained leaf packages:
 - **Lean Dependencies**: connectors share no intermediate package and pull in only what each backend needs
 - **Consumer-Agnostic**: usable from any application layer, with no framework assumptions
 - **Incremental Adoption**: install only the connectors an application actually uses
+
+[grafctory]: https://github.com/grafctory
 
 # Installation
 
@@ -64,3 +67,5 @@ npm install <peer-dependency>                    # connector peer dependencies, 
 
 This project is licensed under the Apache 2.0 License –
 see [LICENSE](https://github.com/grafctory/wire?tab=Apache-2.0-1-ov-file) file for details.
+
+<sub>Grafctory™ is a trademark of Metreeca srl.</sub>

@@ -22,7 +22,7 @@
   },
   "githubPages": false,
   "hideGenerator": true,
-  "customFooterHtml": "<a href='https://www.metreeca.com/' style='display: flex; align-items: center; gap: 0.25em'><img src='https://www.metreeca.com/200.svg' alt='Metreeca' style='width: 1.25em; height: 1.25em;'/><span>Copyright © 2026 Metreeca</span></a>",
+  "customFooterHtml": "<a href='https://www.metreeca.com/' style='display: flex; align-items: center; gap: 0.25em'><img src='https://www.metreeca.com/200.svg' alt='Metreeca' style='width: 1.25em; height: 1.25em;'/><span>Copyright © 2026 Metreeca · Grafctory™ is a trademark of Metreeca srl</span></a>",
   "headings": {
     "readme": false
   },
