@@ -1,6 +1,6 @@
 {
   "name": "@grafctory/wire-sparql",
-  "version": "0.13.2",
+  "version": "0.13.3",
   "description": "SPARQL 1.1 query language framework for @grafctory/wire storage connectors.",
   "keywords": [
     "typescript",
@@ -22,7 +22,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/grafctory/wire.git",
-    "directory": "packages/wire-sparql"
+    "directory": "packages/sparql/wire-sparql"
   },
   "type": "module",
   "sideEffects": false,
@@ -56,6 +56,5 @@
   "devDependencies": {
     "typescript": "^6.0.3",
     "vitest": "^4.0.13"
-  },
-  "peerDependencies": null
+  }
 }

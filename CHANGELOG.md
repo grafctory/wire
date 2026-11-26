@@ -8,7 +8,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 > [!NOTE]
 > Packages published under the `@grafctory` scope from version 0.13.1; earlier versions were published under `@metreeca`.
 
-## [Unreleased](https://github.com/grafctory/wire/compare/v0.13.2...HEAD)
+## [Unreleased](https://github.com/grafctory/wire/compare/v0.13.3...HEAD)
+
+## [0.13.3](https://github.com/grafctory/wire/compare/v0.13.2...v0.13.3) - 2026-11-26
+
+### Fixed
+
+- Package pages on npm link to the source folder of each connector rather than to a missing one
 
 ## [0.13.2](https://github.com/grafctory/wire/compare/v0.13.1...v0.13.2) - 2026-11-26
 

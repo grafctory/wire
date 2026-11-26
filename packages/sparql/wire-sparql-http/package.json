@@ -1,6 +1,6 @@
 {
   "name": "@grafctory/wire-sparql-http",
-  "version": "0.13.2",
+  "version": "0.13.3",
   "description": "SPARQL connector for @grafctory/wire backed by a SPARQL 1.1 Protocol endpoint.",
   "keywords": [
     "typescript",
@@ -23,7 +23,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/grafctory/wire.git",
-    "directory": "packages/wire-sparql-http"
+    "directory": "packages/sparql/wire-sparql-http"
   },
   "type": "module",
   "sideEffects": false,
@@ -50,11 +50,10 @@
     "@grafctory/core": "^0.14.0",
     "@grafctory/http": "^0.6.0",
     "@grafctory/trio": "^0.3.0",
-    "@grafctory/wire-sparql": "^0.13.2"
+    "@grafctory/wire-sparql": "^0.13.3"
   },
   "devDependencies": {
     "typescript": "^6.0.3",
     "vitest": "^4.0.13"
-  },
-  "peerDependencies": null
+  }
 }
