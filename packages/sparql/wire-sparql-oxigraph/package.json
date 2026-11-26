@@ -1,6 +1,6 @@
 {
   "name": "@grafctory/wire-sparql-oxigraph",
-  "version": "0.13.1",
+  "version": "0.13.2",
   "description": "SPARQL connector for @grafctory/wire backed by an Oxigraph in-memory WASM store.",
   "keywords": [
     "typescript",
@@ -49,7 +49,7 @@
   "dependencies": {
     "@grafctory/core": "^0.14.0",
     "@grafctory/trio": "^0.3.0",
-    "@grafctory/wire-sparql": "^0.13.1"
+    "@grafctory/wire-sparql": "^0.13.2"
   },
   "peerDependencies": {
     "oxigraph": ">=0.5.0"

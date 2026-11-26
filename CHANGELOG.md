@@ -8,7 +8,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 > [!NOTE]
 > Packages published under the `@grafctory` scope from version 0.13.1; earlier versions were published under `@metreeca`.
 
-## [Unreleased](https://github.com/grafctory/wire/compare/v0.13.1...HEAD)
+## [Unreleased](https://github.com/grafctory/wire/compare/v0.13.2...HEAD)
+
+## [0.13.2](https://github.com/grafctory/wire/compare/v0.13.1...v0.13.2) - 2026-11-26
+
+### Changed
+
+- Bug reports by email go to `info@grafctory.dev`
 
 ## [0.13.1](https://github.com/grafctory/wire/compare/v0.13.0...v0.13.1) - 2026-11-24
 
