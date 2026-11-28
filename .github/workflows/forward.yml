@@ -2,7 +2,7 @@ name: Forward
 
 on:
   issues:
-    types: [ opened, reopened, transferred ]
+    types: [ opened, reopened ]
   pull_request:
     types: [ opened, reopened ]
 
